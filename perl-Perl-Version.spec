@@ -4,7 +4,7 @@
 #
 Name     : perl-Perl-Version
 Version  : 1.013
-Release  : 8
+Release  : 9
 URL      : https://cpan.metacpan.org/authors/id/B/BD/BDFOY/Perl-Version-1.013.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/B/BD/BDFOY/Perl-Version-1.013.tar.gz
 Source1  : http://http.debian.net/debian/pool/main/libp/libperl-version-perl/libperl-version-perl_1.013-2.debian.tar.xz
