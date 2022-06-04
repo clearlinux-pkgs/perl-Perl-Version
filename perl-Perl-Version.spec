@@ -4,14 +4,15 @@
 #
 Name     : perl-Perl-Version
 Version  : 1.013.03
-Release  : 21
+Release  : 22
 URL      : https://cpan.metacpan.org/authors/id/B/BD/BDFOY/Perl-Version-1.013_03.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/B/BD/BDFOY/Perl-Version-1.013_03.tar.gz
 Source1  : http://http.debian.net/debian/pool/main/libp/libperl-version-perl/libperl-version-perl_1.013-2.debian.tar.xz
 Summary  : 'Parse and manipulate Perl version strings'
 Group    : Development/Tools
-License  : Artistic-1.0-Perl
+License  : Artistic-1.0-Perl Artistic-2.0
 Requires: perl-Perl-Version-bin = %{version}-%{release}
+Requires: perl-Perl-Version-license = %{version}-%{release}
 Requires: perl-Perl-Version-man = %{version}-%{release}
 Requires: perl-Perl-Version-perl = %{version}-%{release}
 BuildRequires : buildreq-cpan
@@ -28,6 +29,7 @@ for any Perl module.
 %package bin
 Summary: bin components for the perl-Perl-Version package.
 Group: Binaries
+Requires: perl-Perl-Version-license = %{version}-%{release}
 
 %description bin
 bin components for the perl-Perl-Version package.
@@ -42,6 +44,14 @@ Requires: perl-Perl-Version = %{version}-%{release}
 
 %description dev
 dev components for the perl-Perl-Version package.
+
+
+%package license
+Summary: license components for the perl-Perl-Version package.
+Group: Default
+
+%description license
+license components for the perl-Perl-Version package.
 
 
 %package man
@@ -91,6 +101,8 @@ make TEST_VERBOSE=1 test
 
 %install
 rm -rf %{buildroot}
+mkdir -p %{buildroot}/usr/share/package-licenses/perl-Perl-Version
+cp %{_builddir}/Perl-Version-1.013_03/LICENSE %{buildroot}/usr/share/package-licenses/perl-Perl-Version/64695b892fc13823e47e6bf67744fa5cdf8c4c36
 if test -f Makefile.PL; then
 make pure_install PERL_INSTALL_ROOT=%{buildroot} INSTALLDIRS=vendor
 else
@@ -112,10 +124,14 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 %defattr(-,root,root,-)
 /usr/share/man/man3/Perl::Version.3
 
+%files license
+%defattr(0644,root,root,0755)
+/usr/share/package-licenses/perl-Perl-Version/64695b892fc13823e47e6bf67744fa5cdf8c4c36
+
 %files man
 %defattr(0644,root,root,0755)
 /usr/share/man/man1/perl-reversion.1
 
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.34.0/Perl/Version.pm
+/usr/lib/perl5/*
