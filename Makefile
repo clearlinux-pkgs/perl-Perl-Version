@@ -1,5 +1,5 @@
 PKG_NAME := perl-Perl-Version
-URL = https://cpan.metacpan.org/authors/id/B/BD/BDFOY/Perl-Version-1.015.tar.gz
-ARCHIVES = http://http.debian.net/debian/pool/main/libp/libperl-version-perl/libperl-version-perl_1.013-2.debian.tar.xz deblicense/
+URL = https://cpan.metacpan.org/authors/id/B/BD/BDFOY/Perl-Version-1.016.tar.gz
+ARCHIVES = 
 
 include ../common/Makefile.common

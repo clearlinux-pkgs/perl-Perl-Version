@@ -6,11 +6,10 @@
 # autospec commit: ab27b0e
 #
 Name     : perl-Perl-Version
-Version  : 1.015
-Release  : 28
-URL      : https://cpan.metacpan.org/authors/id/B/BD/BDFOY/Perl-Version-1.015.tar.gz
-Source0  : https://cpan.metacpan.org/authors/id/B/BD/BDFOY/Perl-Version-1.015.tar.gz
-Source1  : http://http.debian.net/debian/pool/main/libp/libperl-version-perl/libperl-version-perl_1.013-2.debian.tar.xz
+Version  : 1.016
+Release  : 29
+URL      : https://cpan.metacpan.org/authors/id/B/BD/BDFOY/Perl-Version-1.016.tar.gz
+Source0  : https://cpan.metacpan.org/authors/id/B/BD/BDFOY/Perl-Version-1.016.tar.gz
 Summary  : 'Parse and manipulate Perl version strings'
 Group    : Development/Tools
 License  : Artistic-2.0
@@ -18,7 +17,6 @@ Requires: perl-Perl-Version-bin = %{version}-%{release}
 Requires: perl-Perl-Version-man = %{version}-%{release}
 Requires: perl-Perl-Version-perl = %{version}-%{release}
 BuildRequires : buildreq-cpan
-BuildRequires : perl(File::Slurp::Tiny)
 # Suppress stripping binaries
 %define __strip /bin/true
 %define debug_package %{nil}
@@ -65,14 +63,10 @@ perl components for the perl-Perl-Version package.
 
 
 %prep
-%setup -q -n Perl-Version-1.015
-cd %{_builddir}
-tar xf %{_sourcedir}/libperl-version-perl_1.013-2.debian.tar.xz
-cd %{_builddir}/Perl-Version-1.015
-mkdir -p deblicense/
-cp -r %{_builddir}/debian/* %{_builddir}/Perl-Version-1.015/deblicense/
+%setup -q -n Perl-Version-1.016
+cd %{_builddir}/Perl-Version-1.016
 pushd ..
-cp -a Perl-Version-1.015 buildavx2
+cp -a Perl-Version-1.016 buildavx2
 popd
 
 %build
