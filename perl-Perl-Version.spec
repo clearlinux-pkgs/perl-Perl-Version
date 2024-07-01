@@ -7,7 +7,7 @@
 #
 Name     : perl-Perl-Version
 Version  : 1.017
-Release  : 30
+Release  : 31
 URL      : https://cpan.metacpan.org/authors/id/B/BD/BDFOY/Perl-Version-1.017.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/B/BD/BDFOY/Perl-Version-1.017.tar.gz
 Summary  : 'Parse and manipulate Perl version strings'
