@@ -6,10 +6,10 @@
 # autospec commit: 94c6be0
 #
 Name     : perl-Perl-Version
-Version  : 1.017
-Release  : 33
-URL      : https://cpan.metacpan.org/authors/id/B/BD/BDFOY/Perl-Version-1.017.tar.gz
-Source0  : https://cpan.metacpan.org/authors/id/B/BD/BDFOY/Perl-Version-1.017.tar.gz
+Version  : 1.018
+Release  : 34
+URL      : https://cpan.metacpan.org/authors/id/B/BR/BRIANDFOY/Perl-Version-1.018.tar.gz
+Source0  : https://cpan.metacpan.org/authors/id/B/BR/BRIANDFOY/Perl-Version-1.018.tar.gz
 Summary  : 'Parse and manipulate Perl version strings'
 Group    : Development/Tools
 License  : Artistic-2.0
@@ -63,10 +63,10 @@ perl components for the perl-Perl-Version package.
 
 
 %prep
-%setup -q -n Perl-Version-1.017
-cd %{_builddir}/Perl-Version-1.017
+%setup -q -n Perl-Version-1.018
+cd %{_builddir}/Perl-Version-1.018
 pushd ..
-cp -a Perl-Version-1.017 buildavx2
+cp -a Perl-Version-1.018 buildavx2
 popd
 
 %build
