@@ -7,7 +7,7 @@
 #
 Name     : perl-Perl-Version
 Version  : 1.018
-Release  : 34
+Release  : 35
 URL      : https://cpan.metacpan.org/authors/id/B/BR/BRIANDFOY/Perl-Version-1.018.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/B/BR/BRIANDFOY/Perl-Version-1.018.tar.gz
 Summary  : 'Parse and manipulate Perl version strings'
